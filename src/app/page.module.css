@@ -1,0 +1,269 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(255, 214, 102, 0.12), transparent 20%),
+    var(--surface-bg);
+  color: var(--text-primary);
+}
+
+.hero,
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  padding: 96px 0 64px;
+}
+
+.heroContent h1 {
+  max-width: 560px;
+  font-size: clamp(3rem, 4.8vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 12px 0 16px;
+}
+
+.heroContent p {
+  max-width: 580px;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: #fff7d6;
+  color: #8a5b00;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.heroActions {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.primaryButton {
+  background: var(--primary);
+  color: white;
+}
+
+.secondaryButton {
+  background: white;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stats strong {
+  font-size: 1.2rem;
+}
+
+.stats span {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.previewCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+}
+
+.previewTop,
+.previewInfo div,
+.petRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.previewTop {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.previewImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff5bd, #f9a826);
+  font-size: 6rem;
+}
+
+.previewInfo {
+  padding: 16px 6px 4px;
+}
+
+.previewInfo h2 {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.previewInfo p,
+.previewInfo small,
+.petCard p,
+.petCard small {
+  color: var(--text-secondary);
+}
+
+.previewInfo div {
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.previewInfo span,
+.petRow span {
+  background: #f7f7f7;
+  border-radius: 999px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+}
+
+.sectionHeader span {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sectionHeader h2 {
+  font-size: 2rem;
+  margin-top: 6px;
+}
+
+.featureGrid,
+.stepsRow,
+.petGrid {
+  display: grid;
+  gap: 16px;
+}
+
+.featureGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.featureCard,
+.stepCard,
+.petCard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.featureCard h3,
+.stepCard h3,
+.petCard h3 {
+  margin-bottom: 8px;
+}
+
+.stepsRow {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stepCard {
+  text-align: center;
+}
+
+.stepCard span {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  background: #fff7d6;
+  color: #8a5b00;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.petGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.petAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: #f7f7f7;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .featureGrid,
+  .stepsRow,
+  .petGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 64px 0 40px;
+  }
+
+  .heroActions,
+  .stats {
+    flex-direction: column;
+  }
+
+  .featureGrid,
+  .stepsRow,
+  .petGrid {
+    grid-template-columns: 1fr;
+  }
+}
